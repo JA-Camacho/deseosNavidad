@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* navbar */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	padding: 60px 0;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+nav {
+	text-align: right;
+	padding: 30px 50px 0 0;
+}
+
+nav>a {
+	color: #F8F7F7;
+	font-size: 22px;
+	font-weight: 300;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+nav>a:hover {
+	/* Cuando se pasa el mouse por encima*/
+	text-decoration: underline;
+}
+
+.titulo {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+header {
+	width: 100%;
+	height: 400px;
+	background: #7cd3e2;
+	background: -webkit-linear-gradient(to top, hsla(0, 95%, 17%, 0.062),
+			hsla(0, 94%, 13%, 0.123), hsla(0, 95%, 17%, 0.123)),
+		url(../../../assets/cri.png);
+	background: linear-gradient(to top, hsla(0, 95%, 17%, 0.062),
+			hsla(0, 94%, 13%, 0.123), hsla(0, 95%, 17%, 0.123)),
+		url(../../../assets/cri.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	position: relative;
+}
+
+header .texto-header {
+	display: flex;
+	height: 430px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+/*
+.texto-header h1 {
+	color: hsl(132, 73%, 14%);
+	font-size: 100px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-bottom: 20px;
+	text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}*/
+
+.neon-text {
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	font-size: 130px;
+	cursor: pointer;
+	transition: .3s linear;
+	color: transparent;
+	-webkit-text-stroke: 2px rgb(212, 175, 55);
+	background-image: linear-gradient(to left, rgb(212, 175, 55),
+			rgb(233, 191, 53), rgb(192, 192, 192), rgb(119, 113, 113));
+	background-size: 200%;
+	-webkit-background-clip: text;
+	animation: move 20s linear infinite;
+}
+
+@keyframes move {
+	100% {
+		background-position: 2000px 0;
+	}
+}
+
+.neon-text:hover {
+	color: rgb(212, 175, 55);
+	text-shadow: 0 0 10px rgba(204, 169, 54, 0.541),
+		0 0 20px rgba(204, 169, 54, 0.541),
+		0 0 40px rgba(204, 169, 54, 0.541),
+		0 0 80px rgba(204, 169, 54, 0.541),
+		0 0 160px rgba(204, 169, 54, 0.541),
+		0 0 320px rgba(204, 169, 54, 0.541);
+}
+
+.slide {
+	background-size: 100% 100%;
+	top: 50%;
+	left: 50%;
+	margin-left: 50px;
+	width: 600px;
+	height: 380px;
+	border-radius: 10px;
+	animation: slide 10s infinite linear;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+@keyframes slide {
+	0% {
+		background-image: url(../../../assets/noel.png);
+	}
+
+	25% {
+		background-image: url(../../../assets/feliz.jpg);
+	}
+
+	75% {
+		background-image: url(../../../assets/banner.png);
+	}
+
+	100% {
+		background-image: url(../../../assets/noel.png);
+	}
+}
+
+.imagen {
+	width: 50%;
+	margin-left: 70px;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.card {
+	margin-top: 50px;
+	margin-left: 150px;
+	margin-right: -100px;
+}
+
+/* about us */
+#about {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#about p {
+	margin-top: 15px;
+	margin-left: 100px;
+	margin-right: -40px;
+	font-size: 18;
+	text-align: justify;
+	color: hsla(0, 0%, 0%, 0.842);
+}
+
+#about img {
+	margin-top: 15px;
+	height: 250px;
+	width: 300px;
+
+}

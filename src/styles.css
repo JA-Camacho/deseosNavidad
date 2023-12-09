@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* banner */
+#banner-container{
+	background-color: rgb(112, 13, 13);
+	color: #fff !important;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+#banner-row img{
+	max-width: 65%;
+	height: auto;
+	display: block;
+	padding-left: 30px;
+}
+
+#banner-row a{
+	background-color: #fff !important;
+	color: #000 !important;
+	border: none;
+	margin-left: 20px;
+	margin-top: 20px; 
+}
+
+#banner-row h3,p{
+	padding-left: 10px;
+	text-align: center;
+}
+#banner-col{
+	padding-left: 20px;
+}
