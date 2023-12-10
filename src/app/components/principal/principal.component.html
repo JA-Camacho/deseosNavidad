@@ -24,9 +24,9 @@
                         <h5 class="card-title text-center">Ingresa tu Deseo</h5>
                         <form>
                             <div class="form-group">
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                                <textarea [(ngModel)] = "deseo_in" class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
                             </div>
-                            <button type="button" class="btn btn-success" routerLink="">Enviar</button>
+                            <button type="button" (click)="registrarDeseo();" class="btn btn-success" routerLink="">Enviar</button>
                         </form>                 
                     </div>                
                 </div><br><br>
