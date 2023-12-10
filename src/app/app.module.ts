@@ -9,20 +9,25 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { ClouDeseosComponent } from './components/clou-deseos/clou-deseos.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
+import { ToastComponent } from './components/toast/toast.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     FooterComponent,
     PrincipalComponent,
-    ClouDeseosComponent
+    ClouDeseosComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
