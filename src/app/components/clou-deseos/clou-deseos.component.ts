@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Deseo } from 'src/app/models/deseo';
+import { DeseosService } from 'src/app/services/deseos.service';
 
 @Component({
   selector: 'app-clou-deseos',
@@ -6,26 +8,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./clou-deseos.component.css']
 })
 export class ClouDeseosComponent {
-  deseos: string[] = [];
+  deseos: Deseo[] = [];
   nuevoDeseo: string = '';
+  loading: boolean = true; // Variable para controlar la visibilidad de la pantalla de carga
+  private colors = ['#ff0000', '#228b22', '#800080', '#ffd700', '#8b4513', '#006400'];
 
-  enviarDeseo() {
-    if (this.nuevoDeseo.trim() !== '') {
-      this.deseos.push(this.nuevoDeseo);
-      this.nuevoDeseo = '';
-    }
+  constructor(public deseosService: DeseosService) {}
+
+  ngOnInit(): void {
+    this.getDeseos();
   }
 
-  getRandomColor() {
-    const colors = ['#ff0000', '#228b22', '#800080', '#ffd700', '#8b4513', '#006400'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
+  getDeseos() {
+    this.deseosService.getDesires().subscribe(
+      (res) => {
+        this.deseos = res as Deseo[];
+        this.loading = false; // Marcar como completado cuando se recibe la respuesta
+      },
+      (error) => {
+        console.error('Error al obtener deseos', error);
+        this.loading = false; // Marcar como completado incluso si hay un error (puedes manejar esto según tus necesidades)
+      }
+    );
   }
 
-  onKeyUp(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      this.enviarDeseo();
-    }
-  }
+  randomColor(): string {
+    const randomBytes = new Uint8Array(1);
+    crypto.getRandomValues(randomBytes);
 
+    const randomIndex = randomBytes[0] % this.colors.length;
+    return this.colors[randomIndex];
+  }
 }
