@@ -1,12 +1,14 @@
-<div class="container">
-    <h1>Deseos Navideños</h1>
-    <input id="deseoInput" [(ngModel)]="nuevoDeseo" (keyup)="onKeyUp($event)" placeholder="Escribe un deseo" />
+<body>
+    <div class="container">
+        <h1>Deseos Navideños</h1>
+        <input id="deseoInput" [(ngModel)]="nuevoDeseo" (keyup)="onKeyUp($event)" placeholder="Escribe un deseo" />
 
-    <button (click)="enviarDeseo()">Enviar Deseo</button>
+        <button (click)="enviarDeseo()">Enviar Deseo</button>
 
-    <div id="deseosContainer">
-        <div *ngFor="let deseo of deseos" class="deseo" [style.backgroundColor]="getRandomColor()">
-            {{ deseo }}
+        <div id="deseosContainer">
+            <div *ngFor="let deseo of deseos" class="deseo" [style.backgroundColor]="getRandomColor()">
+                {{ deseo }}
+            </div>
         </div>
     </div>
-</div>
+</body>
