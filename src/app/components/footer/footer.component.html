@@ -21,13 +21,15 @@
           <form >
             <form>
               <div class="form-group">
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                  <textarea [(ngModel)]="sugerencia_in" class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
               </div>                           
           </form><br>
-          <button type="button" class="btn btn-success">Enviar</button>
+          <button (click)="registrarSugerencia();" type="button" class="btn btn-success">Enviar</button>
           </form>
         </div>
       </div>
     </div>
+<app-toast [message]="toastMessage" [show]="showToast"></app-toast>
+
   </section>
 </section>
