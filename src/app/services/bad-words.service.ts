@@ -5,8 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BadWordsService {
-  //readonly URL_API = 'https://backenddeseos.azurewebsites.net/badWords';
-  readonly URL_API = 'http://localhost:3000/badWords';
+  readonly URL_API = 'https://backenddeseos.azurewebsites.net/badWords';
   constructor(private http: HttpClient) {
    }
   

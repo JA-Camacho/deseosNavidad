@@ -7,7 +7,7 @@ import { Deseo } from '../models/deseo';
 })
 export class DeseosService {
 
-  readonly URL_API = 'http://localhost:3000/desires';
+  readonly URL_API = 'https://backenddeseos.azurewebsites.net/desires';
   constructor(private http: HttpClient) {
    }
   
@@ -15,7 +15,7 @@ export class DeseosService {
     return this.http.get(this.URL_API);
   }
   postDesire(deseo: Deseo){
-    let URL_API_POST = 'http://localhost:3000/badWords';
+    let URL_API_POST = 'https://backenddeseos.azurewebsites.net/badWords';
     return this.http.post(URL_API_POST, deseo);
   }
 }

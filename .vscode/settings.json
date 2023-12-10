@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fdff019e-ae07-442a-a04a-77620d52e043/resourceGroups/angular/providers/Microsoft.Web/sites/deseosNavidad",
+    "appService.deploySubpath": "dist/deseos-navidad"
+}
