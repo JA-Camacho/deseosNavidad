@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ClouDeseosComponent } from './components/clou-deseos/clou-deseos.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
