@@ -11,7 +11,6 @@ export class ClouDeseosComponent {
   deseos: Deseo[] = [];
   nuevoDeseo: string = '';
   loading: boolean = true; // Variable para controlar la visibilidad de la pantalla de carga
-  private colors = ['#ff0000', '#228b22', '#800080', '#ffd700', '#8b4513', '#006400'];
 
   constructor(public deseosService: DeseosService) {}
 
@@ -32,11 +31,8 @@ export class ClouDeseosComponent {
     );
   }
 
-  randomColor(): string {
-    const randomBytes = new Uint8Array(1);
-    crypto.getRandomValues(randomBytes);
-
-    const randomIndex = randomBytes[0] % this.colors.length;
-    return this.colors[randomIndex];
+  getBackgroundColor(index: number): string {
+    // Si el índice es par, devuelve rojo; de lo contrario, devuelve verde
+    return index % 2 === 0 ? 'rgb(138, 12, 12)' : 'rgb(9, 122, 47)';
   }
 }

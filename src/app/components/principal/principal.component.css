@@ -44,10 +44,10 @@ header {
 	height: 400px;
 	background: -webkit-linear-gradient(to top, hsla(0, 95%, 17%, 0.062),
 			hsla(0, 94%, 13%, 0.123), hsla(0, 95%, 17%, 0.123)),
-		url(../../../assets/cri.png);
+		url(../../../assets/cri.jpg);
 	background: linear-gradient(to top, hsla(0, 95%, 17%, 0.062),
 			hsla(0, 94%, 13%, 0.123), hsla(0, 95%, 17%, 0.123)),
-		url(../../../assets/cri.png);
+		url(../../../assets/cri.jpg);
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	position: relative;
