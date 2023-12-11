@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { ToastComponent } from './components/toast/toast.component';
+import { ChatComponent } from './components/chat/chat.component'
+import { ChatService } from './services/chat.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { ToastComponent } from './components/toast/toast.component';
     FooterComponent,
     PrincipalComponent,
     ClouDeseosComponent,
-    ToastComponent
+    ChatComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { ToastComponent } from './components/toast/toast.component';
     HttpClientModule,BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ChatService],
+  bootstrap: [AppComponent, ChatComponent]
 })
 export class AppModule { }
