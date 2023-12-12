@@ -39,3 +39,17 @@
         margin-left: 0;
     }
 }
+#footer-col2 p {
+    margin-bottom: 5px; /* Ajusta el valor según tus necesidades */
+}
+
+#mensaje {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Sombreado alrededor del recuadro de texto */
+}
+
+/* Estilos para el botón de enviar */
+.btn-success:hover {
+    background-color: #0e6e39 !important; /* Cambiar el color al pasar el mouse */
+    border-color: #0e6e39!important;
+    color: #fff !important;
+}
