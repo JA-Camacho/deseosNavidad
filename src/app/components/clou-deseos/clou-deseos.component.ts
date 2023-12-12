@@ -32,7 +32,6 @@ export class ClouDeseosComponent {
   }
 
   getBackgroundColor(index: number): string {
-    // Si el índice es par, devuelve rojo; de lo contrario, devuelve verde
-    return index % 2 === 0 ? 'rgb(138, 12, 12)' : 'rgb(9, 122, 47)';
-  }
+    return index % 3 === 0 ? '#7E57C2 ' : (index % 3 === 1 ? '#5C6BC0' : '#2196F3');
+}
 }

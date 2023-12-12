@@ -9,10 +9,46 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    background-color: #f8f3dc;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
 }
+
+/*ci*/
+.container h1 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 2px #888888;
+}
+.container h1:hover {
+    color: #9e0000; 
+}
+
+@keyframes shakeAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.container h1:hover {
+    animation: shakeAnimation 0.5s ease-in-out infinite; /* Ajusta la duración según tus preferencias */
+}
+
 
 input {
     width: 70%;
@@ -60,4 +96,23 @@ input {
   .loading-message {
     font-size: 20px;
   }
-  
+  @media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    #deseosContainer {
+        margin-top: 10px;
+    }
+
+    .deseo {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+}

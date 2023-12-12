@@ -1,24 +1,41 @@
-/* banner */
-#banner-container{
-	background-color: rgb(112, 13, 13);
-	color: rgb(255, 254, 228) !important;
-	padding-top: 30px;
-	padding-bottom: 20px;
+/* footer.component.css */
+
+/* Estilos generales */
+#banner-container {
+    background-color: #700d0d;
+    color: rgb(255, 254, 228) !important;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
-#banner-row a{
-	background-color: rgb(255, 254, 228) !important;
-	color: #000 !important;
-	border: none;
-	margin-left: 20px;
-	margin-top: 20px; 
+#banner-row a {
+    background-color: rgb(255, 254, 228) !important;
+    color: #000 !important;
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
-#banner-row h3,p{
+#banner-row h3,
+#banner-row p {
     color: rgb(255, 254, 228);
-	padding-left: 10px;
-	text-align: center;
+    padding-left: 10px;
+    text-align: center;
 }
-#banner-col{
-	padding-left: 20px;
+
+/* Estilos específicos para pantallas pequeñas (por ejemplo, teléfonos) */
+@media screen and (max-width: 767px) {
+    #footer-col1,
+    #footer-col2 {
+        margin-bottom: 20px;
+    }
+
+    #banner-row {
+        flex-direction: column;
+    }
+
+    #banner-row a {
+        margin-top: 0;
+        margin-left: 0;
+    }
 }

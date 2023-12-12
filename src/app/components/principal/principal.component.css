@@ -148,8 +148,9 @@ a:hover i::after{
 	cursor: pointer;
 	transition: .3s linear;
 	color: transparent;
+	color: #ddd237;
 	-webkit-text-stroke: 2px rgb(212, 175, 55);
-	background-image: linear-gradient(to left, rgb(212, 175, 55),
+	background-image: linear-gradient(to left, hsl(46, 65%, 52%),
 			rgb(233, 191, 53), rgb(192, 192, 192), rgb(119, 113, 113));
 	background-size: 200%;
 	-webkit-background-clip: text;
@@ -242,4 +243,48 @@ a:hover i::after{
 	height: 250px;
 	width: 300px;
 
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav > a {
+        font-size: 16px;
+        margin-right: 0; /* Ajusta el margen derecho */
+    }
+
+    .titulo {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    header .texto-header {
+        height: 200px;
+    }
+
+    body {
+        margin-top: 0;
+    }
+
+    /* Estilos para el formulario de deseo y botón en pantallas pequeñas */
+    #formularioDeseo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #mensaje {
+        width: 100%; /* O ajusta el ancho según tus necesidades */
+        margin-bottom: 10px;
+    }
+
+    #btnEnviar {
+        width: 100%; /* O ajusta el ancho según tus necesidades */
+    }
 }

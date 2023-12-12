@@ -1,7 +1,6 @@
 <header>
     <section class="texto-header">
         <h1 class="neon-text">Deseos</h1>
-
     </section>
 </header>
 
@@ -24,14 +23,14 @@
                         <h5 class="card-title text-center">Ingresa tu Deseo</h5>
                         <form>
                             <div class="form-group">
-                                <textarea [(ngModel)] = "deseo_in" class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                                <textarea [(ngModel)]="deseo_in" class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
                             </div>
-                            <button type="button" (click)="registrarDeseo();" class="btn btn-success" routerLink="">Enviar</button>
+                            <button type="button" (click)="registrarDeseo();" class="btn btn-success btn-block" routerLink="">Enviar</button>
                         </form>                 
                     </div>                
                 </div><br><br>
                 <div class="text-center mt-3">
-                    <a href="#" style="--clr:#6eff3e" routerLink="/clou-deseos"><span>Nube de Deseos</span><i></i></a>
+                    <a href="#" style="--clr:#448ee4" routerLink="/clou-deseos" class="btn btn-primary btn-block"><span>Nube de Deseos</span><i></i></a>
                 </div>
             </div> 
         </div>
@@ -39,24 +38,18 @@
     <br>
 </body>
 
-
 <!-- about us -->
 <section id="about">
     <h1 class="text-center">Acerca de Nosotros</h1>
     <div class="container-fluid" id="about-container">
         <div class="row" id="banner-row">
             <div class="col-md-5" id="about-col">
-                <p>Somos estudiantes del séptimo semestre de la carrera de Ingeniería
-                    en Ciencias de la Computación. Nos apasiona el mundo de la tecnología y
-                    estamos comprometidos con la búsqueda constante del conocimiento en este fascinante campo.
-                </p>
-                <p>Nos esforzamos por mantenernos actualizados con las últimas tendencias tecnológicas y
-                    estamos emocionados por contribuir al avance de la computación. </p>
+                <p>Somos estudiantes del séptimo semestre de la carrera de Ingeniería en Ciencias de la Computación. Nos apasiona el mundo de la tecnología y estamos comprometidos con la búsqueda constante del conocimiento en este fascinante campo.</p>
+                <p>Nos esforzamos por mantenernos actualizados con las últimas tendencias tecnológicas y estamos emocionados por contribuir al avance de la computación.</p>
             </div>
             <div class="col-md-7" id="banner-col2">
                 <img src="assets/arbol.png" class="img-fluid rounded mx-auto d-block">
             </div>
-
         </div>
     </div><br>
 </section>

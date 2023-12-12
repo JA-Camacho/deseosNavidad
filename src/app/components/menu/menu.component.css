@@ -1,0 +1,17 @@
+.navbar-nav a{
+    font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        transition: color 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px #888888;
+        color: white;
+    }
+    
+    
+    .navbar {
+        background-color: #700d0d; /* Puedes cambiar el color a tu preferencia */
+    }
+    
+    .navbar-nav a:hover {
+        color: #00ff73; /* Cambia a este color cuando el mouse está encima (puedes ajustar el color según tus preferencias) */
+    }
